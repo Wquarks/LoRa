@@ -26,7 +26,7 @@ for line in fin:
     
     rssi = re.search(r"rssi=[-]?[0-9]{,4}", line)
     if  rssi :
-        rssi=rssi.group().replace("rssi=", "").replace("-", "")
+        rssi=rssi.group().replace("rssi=", "")
     else:
         rssi=0
         
@@ -48,5 +48,3 @@ fin.close()
 fout.close()
 
 print("OK")
-
-  
