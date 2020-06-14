@@ -6,7 +6,7 @@ from network import LoRa #pour etre en mode LoRa
 from L76GNSS import L76GNSS # pour le module gps
 from pytrack import Pytrack # shield du modul gps
 
-lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868, bandwidth=LoRa.BW_250KHZ, tx_power=14, preamble=20, sf=12 ) #configuration initiale
+lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868, bandwidth=LoRa.BW_250KHZ, preamble=20, sf=12 ) #configuration initiale
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 py = Pytrack() # initialisation du shield
 l76 = L76GNSS(py, timeout=1) # initialisation GPS
