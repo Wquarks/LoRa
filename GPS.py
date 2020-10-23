@@ -9,7 +9,7 @@ from pytrack import Pytrack # shield du modul gps
 lora = LoRa(mode=LoRa.LORA, region=LoRa.EU868, bandwidth=LoRa.BW_250KHZ, preamble=20, sf=12 ) #configuration initiale
 s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
 py = Pytrack() # initialisation du shield
-l76 = L76GNSS(py, timeout=1) # initialisation GPS
+l76 = L76GNSS(py, timeout=10) # initialisation GPS
 
 pycom.heartbeat(False) # on stop les pulsations indiquant que le module est allumé
 pycom.rgbled(0x7f0000) # on initialise la led en rouge
